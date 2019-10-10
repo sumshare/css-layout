@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+</head>
+<style>
+* {
+  margin: 0;
+  padding: 0
+}
+
+body {
+  min-width: 550px;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+#header,
+#footer {
+  background: rgba(29, 27, 27, 0.726);
+  text-align: center;
+  height: 60px;
+  line-height: 60px;
+}
+
+#container {
+  overflow: hidden;
+}
+
+.column {
+  text-align: center;
+}
+
+#left,
+#right,
+#center {
+  float: left;
+  /*三列高度撑开对齐，关键步*/
+  padding-bottom: 10000px;
+  margin-bottom: -10000px;
+}
+
+#center {
+  width: 100%;
+  background: rgb(206, 201, 201);
+}
+
+#left {
+  width: 200px;
+  margin-left: -100%;
+  background: rgba(95, 179, 235, 0.972);
+}
+
+#right {
+  width: 150px;
+  margin-left: -150px;
+  background: rgb(231, 105, 2);
+}
+
+.content {
+  margin: 0 150px 0 200px;
+  height: 400px;
+}
+</style>
+
+<body>
+  <div id="header">#header</div>
+  <div id="container">
+    <div id="center" class="column">
+      <div class="content">
+        #center
+      </div>
+    </div>
+    <div id="left" class="column">#left</div>
+    <div id="right" class="column">#right</div>
+  </div>
+  <div id="footer">#footer</div>
+</body>
+
+</html>
